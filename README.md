@@ -42,7 +42,8 @@ The following **additional** features are implemented:
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
-![](your-link-here)
+<img src="https://imgur.com/4ZVw7FY.gif" width = "800"><br>
+<img src="https://imgur.com/sT7p1Qr.gif" width = "800"><br>
 
 
 ## Reflection Questions
