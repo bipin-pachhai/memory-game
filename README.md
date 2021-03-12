@@ -64,7 +64,10 @@ Here's a walkthrough of implemented user stories:
       clear all previously set time intervals. In this way, I overcame the timer challenge implemented in the game.]
 
 3. What questions about web development do you have after completing your submission? (recommended 100 - 300 words) 
-[YOUR ANSWER HERE]
+
+      [In this game, we have registered our functions to the events like onmouseup, onmousedown, onclick etc. There  are also many browser events where 
+      we can register our customized functions to be called when the specific event gets fired. However, I was curious about how we can define and create our own events. 
+      How can we register our own events which the browser can recognize? ]
 
 4. If you had a few more hours to work on this project, what would you spend them doing (for example: refactoring certain functions, adding additional features, etc). Be specific. (recommended 100 - 300 words) 
 
