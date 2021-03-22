@@ -58,22 +58,22 @@ Here's a walkthrough of implemented user stories:
       some of the questions asked on StackOver and w3school tutorials and learned how to implement them beforehand. Yet another challenge was to adjust the countdown on each progress 
       because as the game progresses, playing more clues takes more time. At first, I tried implementing setInterval() in startGame() function. However, it only gave me constant time 
       limit for all progresses. So, timer was no worth of challenge for the player. Since my goal was to change time limit on each progress to make it more challenging as the level 
-      progresses, after making some calculations, I finally implemented it in the playSequence() function where countdown timer will be reset depending on which level of progress the
-      player is in. Yet another challenge was when to clear the interval. At first, I had used clearInterval() function only on startCountDown() function which cleared the interval only after 
-      the player runs out of time. However, when it tested my code, time calibration did not work as expected. The problem was whenever playSequence() function was called, it kept 
-      setting the time interval without clearing the previously set setInterval() function. So, I inserted clearInterval() at the start of the playSequence() function so that it will 
-      clear all previously set time intervals. In this way, I overcame the timer challenge implemented in the game.]
+      progresses, I had to work on time calculation and figure out the function where time constraint can be implemented so that timer adjust dynamically. So, I finally implemented it in the playSequence() function 
+      where countdown timer will be reset depending on which level of progress the player is in. Yet another challenge was when to clear the interval. At first, I had used clearInterval() function only on startCountDown() function,
+      which cleared the interval only after the player runs out of time. However, when I tested my code, time calibration did not work as expected. The problem was whenever playSequence() function was called, it kept 
+      setting the time interval without clearing the previously set setInterval() function. So, I inserted clearInterval() at the start of the playSequence() function. The purpose was to clear the previously set time interval whenever playSequence() function is called
+      to play the next sequence. After resolving above mentioned issues, I was able to achieve a dynamic and seamless countdown timer in the game. In this way, I overcame the timer challenge implemented in the game.]
 
 3. What questions about web development do you have after completing your submission? (recommended 100 - 300 words) 
 
-      [In this game, we have registered our functions to the events like onmouseup, onmousedown, onclick etc. There  are also many browser events where 
-      we can register our customized functions to be called when the specific event gets fired. However, I was curious about how we can define and create our own events. 
-      How can we register our own events which the browser can recognize? ]
-
+      [In this game, we have registered our functions to the events like onmouseup, onmousedown, onclick etc. While going through the documentation related to Event Reference, I have also learned that there are already many browser events where 
+      we can register our customized functions to be called when the specific event gets fired. However, I was curious about how we can define and create our own events. How can we register our own events which the browser can recognize? 
+      Are events only created by the browser developer? Do different browsers recognize the same event differently?]
+      
 4. If you had a few more hours to work on this project, what would you spend them doing (for example: refactoring certain functions, adding additional features, etc). Be specific. (recommended 100 - 300 words) 
 
     [If I had a few more hours to work on this project, I would have added following functionalities in the game:
-    * a)	**Pause/Resume Button:** I would have added pause/resume button functionality in the game. Using the queue data structures, it will be possible to keep track of the history of the progress of the game. Since, queue works on the basis of first-in first-out, it will be easy to resume/pause the game at some point of game and resume it later at the same point because the paused point will always be at the first place of the stack and will advance forward according to the order of the values stored in the queue. 
+    * a)	**Pause/Resume Button:** I would have added pause/resume button functionality in the game. Using the queue data structures, it will be possible to keep track of the history of the progress of the game. Since, queue works on the basis of first-in first-out, it will be easy to resume/pause the game at some point of game and resume it later at the same point. The paused point will always be at the first place in the queue and will advance forward according to the order of the values stored in the queue. 
     * b)	 **Timer:** I would have worked more on testing and calibrating the timer so that it would be adjustable with clueHoldTime and nextClueWaitTime constants, and yet challenging for the player. In this version of the game, the timer will count both the time computer takes to run the clues and the time player takes to make the correct guess. So, I would have worked on the timer which will only start  countdown on user’s turn after the computer finishes playing all the clues on the particular progress.
     * c)	**Dynamic Clues:** Since the number of clues to be displayed are always fixed (whatever the number is), I was also looking forward to adding more clues automatically as the level  of the increases. It would have made the game more challenging and the goal of adding clues dynamically would have been easily achieved by hiding the remaining clues and showing them only after the game reaches the certain level or progress.
     ]
